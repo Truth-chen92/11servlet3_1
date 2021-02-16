@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--此写法会去Context对象中查找key为name的值
+    th:text 是替换标签的文本内容-->
+<h1 th:text="${name}">xxx</h1>
+<ul>
+<!--th:each 遍历容器中的集合-->
+    <li th:each="s:${list}" th:text="${s}"></li>
+</ul>
+</body>
+</html>
